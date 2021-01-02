@@ -1,0 +1,54 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Debug",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-Iallegro/include",
+				"-Lallegro/lib",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\bin\\Debug\\${workspaceFolderBasename}.exe",
+				"-lallegro_monolith-debug.dll"
+			],
+			"options": {
+				"cwd": "C:\\mingw-w64\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\mingw-w64\\mingw64\\bin\\gcc.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Release",
+			"command": "C:\\mingw-w64\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-IC:\\allegro\\include",
+				"-LC:\\allegro\\lib",
+				"${file}",
+				"-o",
+				"${fileDirname}\\bin\\Release\\${workspaceFolderBasename}.exe",
+				"-lallegro_monolith.dll"
+			],
+			"options": {
+				"cwd": "C:\\mingw-w64\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\mingw-w64\\mingw64\\bin\\gcc.exe"
+		}
+	]
+}

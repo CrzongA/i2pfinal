@@ -1,0 +1,6 @@
+There are total 1 supported mouse buttons
+Allegro5 initialized
+Game begin
+loaded font: (null) with size 0
+loaded font: (null) with size 0
+Menu scene created

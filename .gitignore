@@ -1,0 +1,6 @@
+*
+!*/
+!/.gitignore
+!/project/**
+!/workflow.md/
+!/Allegro5_Tutorial.pdf

@@ -247,6 +247,16 @@ static void update(void) {
 
         if (mouserightdown){
             laser_charge += laser_charge>=1 ? 0 : 0.01;
+            for (int i=0;i<MAX_ENEMY;i++){
+                for (int j=0;j<MAX_ENEMY_BULLET;j++){
+                    game_log("dydx %f laser %f", (plane.y-enemyBullets[i][j].y)/(plane.x-enemyBullets[i][j].x), tan(laser.angle));
+                    if ((plane.y-enemyBullets[i][j].y)/(plane.x-enemyBullets[i][j].x) == tan(laser.angle)-90)
+                        enemyBullets[i][j].hidden=true;
+                    if((plane.y-enemies[i].y)/(plane.x-enemies[i].x) == tan(laser.angle)) {
+                        initEnemy(i, enemies[i].img);
+                    }
+                }
+            }
         }
         else{
             laser_charge -= laser_charge <=0 ? 0 : 0.08;
@@ -444,6 +454,9 @@ static void update(void) {
 static double enemy_move_sin(double xrange, double progress, double freq) {
     return xrange * sin(progress * freq); //
 }
+// [HACKATHON 3-1]
+// TODO: Declare 2 variables for storing settings images.
+// Uncomment and fill in the code below.
 
 static double boss_movement(double time){
 
@@ -462,7 +475,10 @@ static void check_health(){
 static void draw_movable_object(MovableObject obj) {
     if (obj.hidden)
         return;
-    if(obj.img) {
+    if(obj.img) {// [HACKATHON 3-1]
+// TODO: Declare 2 variables for storing settings images.
+// Uncomment and fill in the code below.
+
         if (strcmp("pbullet", obj.name) == 0)
             al_draw_rotated_bitmap(obj.img, obj.w / 2, obj.h / 2, obj.x, obj.y, obj.angle, 0);
         else al_draw_bitmap(obj.img, round(obj.x - obj.w / 2), round(obj.y - obj.h / 2), 0);
@@ -500,8 +516,8 @@ static void draw(void) {
     for (i=0;i<MAX_ENEMY;i++) for (int j=0;j<MAX_ENEMY_BULLET;j++)
         draw_movable_object(enemyBullets[i][j]);
     // draw laser
-    al_draw_filled_circle(plane.x, plane.y, 25*laser_charge, al_map_rgb(0,85,255));
-    al_draw_filled_circle(plane.x, plane.y, 20*laser_charge, al_map_rgb(128,234,255));
+    al_draw_filled_circle(plane.x, plane.y, 30*laser_charge, al_map_rgb(0,85,255));
+    al_draw_filled_circle(plane.x, plane.y, 25*laser_charge, al_map_rgb(128,234,255));
     if(laser_charge>=1)
         al_draw_rotated_bitmap(img_laser, 10, 25, plane.x, plane.y, laser.angle, 0);
 

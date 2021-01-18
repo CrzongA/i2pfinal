@@ -26,9 +26,6 @@ static const char* txt_title = "Orbital Vanguard";
 static const char* txt_hint = "Destiny Awaits.";
 static const char* txt_info = "Press enter key to start";
 static ALLEGRO_BITMAP* img_background;
-// [HACKATHON 3-1]
-// TODO: Declare 2 variables for storing settings images.
-// Uncomment and fill in the code below.
 static ALLEGRO_BITMAP *img_settings;
 static ALLEGRO_BITMAP *img_settings2;
 static double bg_colors[3]={1, 1, 1};

@@ -8,20 +8,22 @@ loaded font: (null) with size 0
 Menu scene created
 Change scene from (null) to (null)
 highscores sorted
-loaded image: PãÉòÜU
+loaded image: (null)
 resized image: (null)
 Menu scene initialized
 Game initialized
 Game start event loop
 Key with keycode 1 down
 Start scene created
-Change scene from Û˙UHâÂâ}¸âu¯âUÙâM∆Nq to (null)
+Change scene from Û˙UHâÂâ}¸âu¯âUÙâM∆ˆn to (null)
 Menu scene destroyed
 loaded image: (null)
-resized image: †8ÉòÜU
-loaded image: –èáòÜU
-resized image: `ﬂoòÜU
-loaded image: ]
+resized image: `ˇB∞U
+loaded image: –∆Z∞U
+resized image: ‡X∞U
+loaded image: (null)
+resized image: Äkï∞U
+loaded image: ¿Öï∞U
 [enemy 0] xVelCoef: 0.000000
 [enemy 0] xVelCoef: 0.000000
 [enemy 0] xVelCoef: 0.000000
@@ -33,74 +35,62 @@ loaded image: ]
 [enemy 0] xVelCoef: 0.000000
 [enemy 0] xVelCoef: 0.000000
 Key with keycode 0 up
-Key with keycode 1 down
-Key with keycode 1 down
-Key with keycode 1 down
-Key with keycode 1 up
+Mouse button 0 down at (4, 138595496)
 Key with keycode 1 down
 Key with keycode 1 up
+Key with keycode 1 down
 Key with keycode 1 down
 Key with keycode 1 up
 Key with keycode 1 up
 Key with keycode 1 down
 Key with keycode 1 up
 Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-Mouse button 0 down at (4, -1737512424)
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 1 up
-enemy 240 destroyed
-Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-enemy 720 destroyed
-Key with keycode 1 up
+Mouse button 0 up at (0, 138595496)
 Key with keycode 1 up
 Key with keycode 1 down
 Key with keycode 1 down
 Key with keycode 1 up
+Key with keycode 1 up
+Mouse button 0 down at (0, 138595496)
+Key with keycode 1 down
 Key with keycode 1 down
 Key with keycode 1 up
-Key with keycode 1 down
-enemy 480 destroyed
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 0 up
-enemy 320 destroyed
-Key with keycode 1 down
 Key with keycode 0 up
 Key with keycode 1 down
 Key with keycode 1 up
 Key with keycode 1 down
 Key with keycode 1 up
-enemy 720 destroyed
 Key with keycode 1 down
-Key with keycode 1 up
-enemy 80 destroyed
-Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 1 up
-Key with keycode 1 down
-Key with keycode 1 up
-enemy 160 destroyed
 Key with keycode 1 down
 Key with keycode 0 up
+Key with keycode 1 up
+Key with keycode 0 down
 Key with keycode 1 down
+Key with keycode 1 up
+Key with keycode 1 down
+Key with keycode 1 up
+Key with keycode 1 up
+Mouse button 0 up at (0, 138595496)
+Key with keycode 1 down
+Key with keycode 1 up
+Key with keycode 1 down
+Key with keycode 1 down
+Key with keycode 1 up
+Key with keycode 1 up
+Key with keycode 1 down
+Key with keycode 1 up
+Key with keycode 1 down
+Key with keycode 1 up
+Key with keycode 1 down
+Key with keycode 1 up
+Mouse button 0 down at (4, 138595496)
+player hit
+Key with keycode 1 down
+Key with keycode 1 up
+Key with keycode 1 down
+Key with keycode 1 up
+Key with keycode 1 down
+Mouse button 0 up at (4, 138595496)
 Key with keycode 0 up
 Key with keycode 1 down
 Key with keycode 1 up
@@ -108,9 +98,7 @@ Key with keycode 1 down
 Key with keycode 1 up
 Key with keycode 1 down
 Key with keycode 1 up
-Key with keycode 0 up
-Mouse button 0 up at (4, -1737512424)
-enemy 560 destroyed
+player hit
 Window close button clicked
 Game end
 Start scene destroyed

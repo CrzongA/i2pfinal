@@ -24,6 +24,7 @@ static ALLEGRO_BITMAP* img_plane;
 static ALLEGRO_BITMAP* img_enemy;
 static ALLEGRO_BITMAP* img_pBullets;
 static ALLEGRO_BITMAP* img_eBullets;
+static ALLEGRO_BITMAP* img_laser;
 
 typedef struct {
     const char* name;
@@ -71,6 +72,7 @@ static MovableObject plane;
 static MovableObject planeHealth;
 static MovableObject enemies[MAX_ENEMY];
 static MovableObject enemyHealth[MAX_ENEMY];
+static MovableObject laser;
 // [HACKATHON 2-3]
 // TODO: Declare an array to store bullets with size of max bullet count.
 // Uncomment and fill in the code below.
@@ -91,6 +93,7 @@ static double total_paused_time;
 static double enemy_last_shoot_timestamp;
 static double player_last_shoot_timestamp;
 static double levelup_timestamp;
+static double laser_charge=0; // 0 to 1
 bool mouseleftdown, mouserightdown;
 static int currentLevel;
 int playerScore[2];
@@ -114,6 +117,7 @@ static void init(void) {
     img_pBullets = al_load_bitmap(concat(img_path, "bullet-red.png"));
     img_eBullets = al_load_bitmap(concat(img_path, "bullet-blue.png"));
     img_crosshair = al_load_bitmap(concat(img_path, "crosshair1.png"));
+    img_laser = load_bitmap_resized(concat(img_path, "laser.png"), SCREEN_W, 50);
     enemy_last_shoot_timestamp = 0;
     // difficulty settings
     for (i=1; i<MAX_LEVELS; i++){
@@ -143,7 +147,6 @@ static void init(void) {
     mouseleftdown = mouserightdown = false;
 //    for (int i=0;i<=gameMode; i++)
     playerScore[0] = playerScore[1]=0;
-//    plane = (MovableObject*)calloc(1, sizeof(MovableObject));
     plane.name = "player";
     plane.x = (float)SCREEN_W/2;
     plane.y = (float)SCREEN_H*4/5;
@@ -183,6 +186,12 @@ static void init(void) {
         playerBullets[i].angle = 0;
         playerBullets[i].hidden = true;
     }
+
+    laser.name = "laser";
+    laser.angle=0;
+    laser.h = 25;
+    laser.w = SCREEN_W;
+    laser.hidden = true;
 
     levelup_timestamp = total_paused_time = 0;
     game_start_timestamp = al_get_time();
@@ -234,6 +243,13 @@ static void update(void) {
     else {
         if(bossmode){
 
+        }
+
+        if (mouserightdown){
+            laser_charge += laser_charge>=1 ? 0 : 0.01;
+        }
+        else{
+            laser_charge -= laser_charge <=0 ? 0 : 0.08;
         }
 
         plane.vx = plane.vy = 0;
@@ -296,6 +312,10 @@ static void update(void) {
                 }
             }
 //            game_log("directional shooting");
+        }
+        else if (mouserightdown && laser_charge>=1){
+            double angle = atan2(plane.y-mouse_y,plane.x-mouse_x );
+            laser.angle = angle - ALLEGRO_PI;
         }
         if (now-enemy_last_shoot_timestamp>=MAX_COOLDOWN){
             for (i=0;i<MAX_ENEMY;i++) {
@@ -479,6 +499,11 @@ static void draw(void) {
         draw_movable_object(playerBullets[i]);
     for (i=0;i<MAX_ENEMY;i++) for (int j=0;j<MAX_ENEMY_BULLET;j++)
         draw_movable_object(enemyBullets[i][j]);
+    // draw laser
+    al_draw_filled_circle(plane.x, plane.y, 25*laser_charge, al_map_rgb(0,85,255));
+    al_draw_filled_circle(plane.x, plane.y, 20*laser_charge, al_map_rgb(128,234,255));
+    if(laser_charge>=1)
+        al_draw_rotated_bitmap(img_laser, 10, 25, plane.x, plane.y, laser.angle, 0);
 
     draw_movable_object(plane);
     draw_movable_object(planeHealth);

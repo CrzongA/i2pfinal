@@ -12,27 +12,39 @@
 
 /* Shared variables. */
 const int FPS = 60;
-const int SCREEN_W = 800;
-const int SCREEN_H = 600;
+const int SCREEN_W = 1280;
+const int SCREEN_H = 720;
 const int RESERVE_SAMPLES = 10;
+const float player_W = 51.0;
+const float player_H = 51.0;
+int highscores[15]={-1};
 Scene active_scene;
 Scene scene_settings;
 Scene scene_start;
 Scene scene_menu;
+Scene scene_gameover;
 bool key_state[ALLEGRO_KEY_MAX];
 bool *mouse_state; //1 left, 2 middle, 3 right
 int mouse_x, mouse_y;
+int playerShip = 1;
+int interrupt_sig; //0 normal, 1 quit
+
 // environment path variables
 const char* img_path = "resources/img/";
 const char* font_path = "resources/font/";
 const char* audio_path = "resources/audio/";
-
+const char *startbgs[6]={"start-bg.jpg","start2-bg.jpg", "start3-bg.jpeg", "start4-bg.jpg", "start5-bg.jpg", "start6-bg.jpg"},
+    *mainbgs[5]={"main-bg.jpg","main2-bg.jpeg", "main3-bg.jpeg"},
+    *gobgs[5]={"gameover-bg.jpeg"},
+    *playerimg[5]={"plane.png", "plane-2.png", "plane-3.png", "plane-4.png"},
+    *enemyimg[5]={"smallfighter.png"},
+    *bossimg[5]={"cromulon1.png"};
 
 /* Internal variables. */
 static ALLEGRO_DISPLAY* game_display;
 static ALLEGRO_EVENT_QUEUE* game_event_queue;
 static ALLEGRO_TIMER* game_update_timer;
-static const char* game_title = "I2P(I)_2020 Final Project <student_id>";
+static const char* game_title = "I2P(I)_2020 Final Project 109062161";
 
 /* Declare static function prototypes. */
 
@@ -141,6 +153,8 @@ static void game_start_event_loop(void) {
     ALLEGRO_EVENT event;
     int redraws = 0;
     while (!done) {
+        if (interrupt_sig==1) //quit game event called
+            break;
         al_wait_for_event(game_event_queue, &event);
         if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
             // Event for clicking the window close button.
@@ -236,14 +250,6 @@ void game_change_scene(Scene next_scene) {
     active_scene = next_scene;
     if (active_scene.initialize)
         active_scene.initialize();
-
-//    if (active_scene.name == SCENE_MENU){
-//
-//    } else if (active_scene == SCENE_START){
-//
-//    } else if (active_scene == SCENE_SETTINGS){
-//        game_update();
-//    }
 }
 
 // +=================================================================+

@@ -11,6 +11,8 @@
 // across different scenes. initialize the value in 'shared.c'.
 extern ALLEGRO_FONT* font_pirulen_32;
 extern ALLEGRO_FONT* font_pirulen_24;
+extern ALLEGRO_FONT* font_pirulen_18;
+extern ALLEGRO_FONT* font_pirulen_15;
 
 // Initialize shared variables and resources.
 // Allows the game to perform any initialization it needs before

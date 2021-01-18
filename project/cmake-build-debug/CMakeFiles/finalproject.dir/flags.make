@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/include -I/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/allegro/include 
+C_INCLUDES = -I/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/include -I/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/allegro/include 
 

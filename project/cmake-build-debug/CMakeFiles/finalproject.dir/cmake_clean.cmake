@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "../finalproject.pdb"
   "CMakeFiles/finalproject.dir/src/game.c.o"
   "CMakeFiles/finalproject.dir/src/main.c.o"
+  "CMakeFiles/finalproject.dir/src/scene_gameover.c.o"
   "CMakeFiles/finalproject.dir/src/scene_menu.c.o"
   "CMakeFiles/finalproject.dir/src/scene_settings.c.o"
   "CMakeFiles/finalproject.dir/src/scene_start.c.o"

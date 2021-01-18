@@ -1,4 +1,4 @@
-# Install script for directory: /media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project
+# Install script for directory: /media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

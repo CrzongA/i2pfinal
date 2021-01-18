@@ -17,9 +17,11 @@ set(SOURCES
         src/scene_menu.c
         src/scene_settings.c
         src/scene_start.c
+        src/scene_gameover.c
         src/shared.c
         src/utility.c
         )
+
 add_executable(finalproject ${SOURCES})
 
 

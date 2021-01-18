@@ -55,19 +55,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/leon/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6397.106/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/leon/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.6682.181/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/leon/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6397.106/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/leon/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.6682.181/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project
+CMAKE_SOURCE_DIR = /media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug
+CMAKE_BINARY_DIR = /media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +94,14 @@ clean: CMakeFiles/finalproject.dir/clean
 CMakeFiles/finalproject.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finalproject.dir/build.make CMakeFiles/finalproject.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finalproject.dir/build.make CMakeFiles/finalproject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target finalproject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target finalproject"
 .PHONY : CMakeFiles/finalproject.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/finalproject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/finalproject.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/finalproject.dir/rule
 
 # Convenience name for target.
@@ -121,7 +121,7 @@ CMakeFiles/finalproject.dir/clean:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

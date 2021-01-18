@@ -1,4 +1,4 @@
-/home/leon/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6397.106/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project
+/home/leon/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.6682.181/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project
 -- Configuring done
 -- Generating done
--- Build files have been written to: /media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug
+-- Build files have been written to: /media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug

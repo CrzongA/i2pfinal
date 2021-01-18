@@ -1,0 +1,37 @@
+[
+{
+  "directory": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/build",
+  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/include -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/allegro/include  -g   -std=gnu11 -o CMakeFiles/finalproject.dir/src/main.c.o   -c f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/main.c",
+  "file": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/main.c"
+},
+{
+  "directory": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/build",
+  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/include -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/allegro/include  -g   -std=gnu11 -o CMakeFiles/finalproject.dir/src/game.c.o   -c f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/game.c",
+  "file": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/game.c"
+},
+{
+  "directory": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/build",
+  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/include -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/allegro/include  -g   -std=gnu11 -o CMakeFiles/finalproject.dir/src/scene_menu.c.o   -c f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_menu.c",
+  "file": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_menu.c"
+},
+{
+  "directory": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/build",
+  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/include -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/allegro/include  -g   -std=gnu11 -o CMakeFiles/finalproject.dir/src/scene_settings.c.o   -c f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_settings.c",
+  "file": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_settings.c"
+},
+{
+  "directory": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/build",
+  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/include -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/allegro/include  -g   -std=gnu11 -o CMakeFiles/finalproject.dir/src/scene_start.c.o   -c f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_start.c",
+  "file": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_start.c"
+},
+{
+  "directory": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/build",
+  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/include -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/allegro/include  -g   -std=gnu11 -o CMakeFiles/finalproject.dir/src/shared.c.o   -c f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/shared.c",
+  "file": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/shared.c"
+},
+{
+  "directory": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/build",
+  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/include -If:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/allegro/include  -g   -std=gnu11 -o CMakeFiles/finalproject.dir/src/utility.c.o   -c f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/utility.c",
+  "file": "f:/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/utility.c"
+}
+]

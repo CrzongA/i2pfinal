@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/src/game.c" "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/game.c.o"
-  "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/src/main.c" "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/main.c.o"
-  "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/src/scene_menu.c" "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/scene_menu.c.o"
-  "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/src/scene_settings.c" "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/scene_settings.c.o"
-  "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/src/scene_start.c" "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/scene_start.c.o"
-  "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/src/shared.c" "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/shared.c.o"
-  "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/src/utility.c" "/media/leon/0B59B2B014834F21/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/utility.c.o"
+  "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/game.c" "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/game.c.o"
+  "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/main.c" "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/main.c.o"
+  "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_gameover.c" "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/scene_gameover.c.o"
+  "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_menu.c" "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/scene_menu.c.o"
+  "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_settings.c" "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/scene_settings.c.o"
+  "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/scene_start.c" "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/scene_start.c.o"
+  "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/shared.c" "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/shared.c.o"
+  "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/src/utility.c" "/media/leon/4442AE2F42AE25A022/LEONLAH/NTHU/109-semA/IntroToProgramming/finalproject_clean/project/cmake-build-debug/CMakeFiles/finalproject.dir/src/utility.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

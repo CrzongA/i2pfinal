@@ -45,6 +45,23 @@ char *concat(const char *s1, const char *s2);
 // TODO: Declare a function.
 // Determines whether the point (px, py) is in rect (x, y, w, h).
 // Uncomment the code below.
-bool pnt_in_rect(int px, int py, int x, int y, int w, int h);
+bool pnt_in_rect(float px, float py, float x, float y, float w, float h);
 // TODO: More functions that can be reused across different scenes.
+
+bool pnt_in_ellipse(float px, float py, float x, float y, float w, float h);
+
+bool bx_in_bx(float px, float py, int pw, int ph, float x, float y, int w, int h);
+
+float easeOutQuad(float progress);
+
+void ascii_to_chars(int val, int operation, char* target);
+
+void read_score(void);
+
+void save_score(void);
+
+void update_score(void);
+
+void sort_scores();
+
 #endif

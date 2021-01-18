@@ -22,7 +22,8 @@
 // TODO: More variables and functions that will only be accessed
 // inside this scene. They should all have the 'static' prefix.
 
-static const char* txt_title = "Space Shooter";
+static const char* txt_title = "Orbital Vanguard";
+static const char* txt_hint = "Destiny Awaits.";
 static const char* txt_info = "Press enter key to start";
 static ALLEGRO_BITMAP* img_background;
 // [HACKATHON 3-1]
@@ -30,6 +31,8 @@ static ALLEGRO_BITMAP* img_background;
 // Uncomment and fill in the code below.
 static ALLEGRO_BITMAP *img_settings;
 static ALLEGRO_BITMAP *img_settings2;
+static double bg_colors[3]={1, 1, 1};
+static bool color_dir[3] = {true};
 #ifdef audio
 static ALLEGRO_SAMPLE* bgm;
 static ALLEGRO_SAMPLE_ID bgm_id;
@@ -41,10 +44,10 @@ static void destroy(void);
 static void on_key_down(int keycode);
 
 static void init(void) {
-    img_background = load_bitmap_resized(concat(img_path,"main-bg.jpg"), SCREEN_W, SCREEN_H);
-    // [HACKATHON 3-4]
-    // TODO: Load settings images.
-    // Uncomment and fill in the code below.
+    // read highscores into buffer.
+    read_score();
+    sort_scores();
+    img_background = load_bitmap_resized(concat(img_path,mainbgs[2]), SCREEN_W, SCREEN_H);
     img_settings = al_load_bitmap(concat(img_path,"settings.png"));
     img_settings2 = al_load_bitmap(concat(img_path, "settings2.png"));
     // Can be moved to shared_init to decrease loading time.
@@ -55,8 +58,19 @@ static void init(void) {
     game_log("Menu scene initialized");
 }
 
+static void update(void){
+    // background color tint loop
+    for (int i=0;i<3;i++) {
+        if (bg_colors[i] > 1) {color_dir[i]=true; bg_colors[i]=1;}
+        else if (bg_colors[i] < 0.5) {color_dir[i]=false; bg_colors[i]=0.5;}
+        if(color_dir[i]) bg_colors[i]-=0.001*(i+1);
+        else bg_colors[i]+=0.001*(i+1);
+    }
+}
+
 static void draw(void) {
-    al_draw_bitmap(img_background, 0, 0, 0);
+//    al_draw_bitmap(img_background, 0, 0, 0);
+    al_draw_tinted_bitmap(img_background, al_map_rgba_f(bg_colors[0], bg_colors[1], bg_colors[2], 1), 0, 0, 0);
     // [HACKATHON 3-5]
     // TODO: Draw settings images.
     // The settings icon should be located at (x, y, w, h) =
@@ -68,6 +82,7 @@ static void draw(void) {
     else
         al_draw_bitmap(img_settings, SCREEN_W-48, 10, 0);
     al_draw_text(font_pirulen_32, al_map_rgb(255, 255, 255), SCREEN_W / 2, 30, ALLEGRO_ALIGN_CENTER, txt_title);
+    al_draw_text(font_pirulen_24, al_map_rgb(220, 220, 255), SCREEN_W / 2, 120, ALLEGRO_ALIGN_CENTER, txt_hint);
     al_draw_text(font_pirulen_24, al_map_rgb(255, 255, 255), 20, SCREEN_H - 50, 0, txt_info);
 }
 
@@ -86,7 +101,7 @@ static void destroy(void) {
 }
 
 static void on_key_down(int keycode) {
-    if (keycode == ALLEGRO_KEY_ENTER)
+    if (keycode == ALLEGRO_KEY_ENTER || keycode == ALLEGRO_KEY_PAD_ENTER)
         game_change_scene(scene_start_create());
 }
 
@@ -113,6 +128,7 @@ Scene scene_menu_create(void) {
     scene.id = 1;
     scene.name = "Menu";
     scene.initialize = &init;
+    scene.update = &update;
     scene.draw = &draw;
     scene.destroy = &destroy;
     scene.on_key_down = &on_key_down;

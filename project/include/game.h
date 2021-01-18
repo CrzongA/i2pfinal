@@ -20,7 +20,7 @@
 // If defined, logs will be shown on console and written to file.
 // If commented out, logs will not be shown nor be saved.
 #define LOG_ENABLED
-//#define audio_enabled
+//#define audio
 // Types of function pointers.
 typedef void(*func_ptr)(void);
 typedef void(*func_ptr_keyboard)(int keycode);
@@ -58,7 +58,15 @@ extern const char* img_path ;
 extern const char* font_path;
 extern const char* audio_path;
 
+/* img asset static variables */
+extern const float player_W;
+extern const float player_H;
 
+/* user variables */
+extern int highscores[15];
+
+/* image paths */
+extern const char *startbgs[6], *mainbgs[5], *gobgs[5], *playerimg[5], *enemyimg[5], *bossimg[5];
 /* Input states */
 
 // The active scene. Events will be triggered through function pointers.
@@ -76,8 +84,10 @@ extern bool key_state[ALLEGRO_KEY_MAX];
 extern bool* mouse_state;
 // Mouse position.
 extern int mouse_x, mouse_y;
-// TODO: More variables to store input states such as joysticks, ...
-
+extern int interrupt_sig;
+extern int gameMode;
+extern int playerScore[2];
+extern int playerShip;
 /* Function prototypes */
 
 // Create and start running the game.

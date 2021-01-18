@@ -1,10 +1,15 @@
 // [utility.c]
 // you should implement the utility functions defined in the header.
 
+#include <string.h>
+#include <stdio.h>
+#include <math.h>
 #include "../include/utility.h"
+#include "../include/game.h"
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_font.h>
+#include <allegro5/allegro_audio.h>
 #ifdef audio
 #include <allegro5/allegro_audio.h>
 #endif
@@ -98,6 +103,89 @@ char* concat(const char *s1, const char *s2){
 // [HACKATHON 3-3]
 // TODO: Define bool pnt_in_rect(int px, int py, int x, int y, int w, int h)
 // Uncomment and fill in the code below.
-bool pnt_in_rect(int px, int py, int x, int y, int w, int h) {
+bool pnt_in_rect(float px, float py, float x, float y, float w, float h) {
     return (px<x+w && px>x && py<y+h && py>y);
+}
+
+bool pnt_in_ellipse(float px, float py, float x, float y, float w, float h){
+    return pow(px-x, 2)/pow(w/2, 2) + pow(py-y, 2)/pow(h/2, 2) <= 1;
+}
+
+bool bx_in_bx(float px, float py, int pw, int ph, float x, float y, int w, int h){
+    float targets[4][2] = {{px, py}, {px+pw, py+ph}, {px+pw, py}, {px, py+ph}};
+    for (int i=0; i<4; i++){
+        if(pnt_in_rect(targets[i][0], targets[i][1], x, y, w, h)) return true;
+    }
+    return false;
+}
+
+/* Return ease out animation function value */
+float easeOutQuad(float progress){
+    return 1 - ((1 - progress) * (1 - progress));
+}
+
+void ascii_to_chars(int val, int operation, char* target){
+    char chars[10]={'\0'};
+    if(operation==1){ //increment
+        val++;
+    }
+    int rem=val, digits[10]={0}, n=0;
+    if(rem==0) digits[0]='0';
+    while(rem>0){
+        digits[n] = rem % 10;
+        rem /= 10;
+        n++;
+    }
+    for (int i=0, j=n; i<n; i++, j--){
+        chars[i] = (char)(digits[j]+'0');
+    }
+
+    memcpy(target, chars, n+1);
+}
+
+void read_score(void){
+    int buffer;
+    int i=0;
+    FILE *pFile = fopen("save.txt", "r");
+    if (pFile){
+        while(fscanf(pFile, "%d", &buffer)!=EOF){
+            highscores[i] = buffer; //atoi(buffer)
+//            game_log("[] score %d", i);
+            i++;
+        }
+        fclose(pFile);
+    }
+}
+
+void save_score(void){
+    FILE *pFile = fopen("save.txt", "w");
+    if(pFile){
+        for (int i=0;i<10;i++)
+            fprintf(pFile, "%d\n", highscores[i]);
+        fclose(pFile);
+    }
+}
+
+void update_score(){
+    // put score of current run into the highscore array, then sort it
+    if (gameMode==0) highscores[10] = playerScore[0];
+    sort_scores();
+}
+
+void sort_scores() {
+    int tmp,sorted;
+    for (int i=0;i<10;i++) {
+        sorted=1;
+        for (int j = 0; j < 10; j++) {
+            if (highscores[j] < highscores[j + 1]) {
+                sorted = 0;
+                tmp = highscores[j + 1];
+                highscores[j + 1] = highscores[j];
+                highscores[j] = tmp;
+            }
+        }
+        if (sorted) break;
+    }
+    highscores[10]=0;
+    game_log("highscores sorted");
 }
